@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://cah3phshxbg7a"]
 
+[ext_resource type="Script" uid="uid://cfp3qlx84xhcg" path="res://scripts/cell.gd" id="1_upbjj"]
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6ngbm"]
 
 [node name="Cell" type="RigidBody2D" unique_id=733137773]
+script = ExtResource("1_upbjj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1990729696]
 shape = SubResource("CapsuleShape2D_6ngbm")
