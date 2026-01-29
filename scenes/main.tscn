@@ -13,4 +13,3 @@ angular_damp = 6.0
 mama = NodePath("../cellMAMA")
 
 [node name="cellMAMA" parent="." unique_id=202214834 instance=ExtResource("1_0wfyh")]
-position = Vector2(342, 388)
