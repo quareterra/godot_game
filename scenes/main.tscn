@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://i6vhh7mkclcf"]
 
 [ext_resource type="PackedScene" uid="uid://bm77up0ibksg3" path="res://scenes/cell_mama.tscn" id="1_0wfyh"]
+[ext_resource type="Script" uid="uid://cyoi4f2fuxumf" path="res://scripts/main.gd" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://cah3phshxbg7a" path="res://scenes/cell.tscn" id="2_sugp2"]
 
 [node name="Main" type="Node2D" unique_id=1919590914]
+script = ExtResource("1_sugp2")
 
 [node name="cellMAMA" parent="." unique_id=202214834 instance=ExtResource("1_0wfyh")]
 position = Vector2(172, 174)
@@ -14,3 +16,5 @@ gravity_scale = 0.0
 linear_damp = 6.0
 angular_damp = 6.0
 mama = NodePath("../cellMAMA")
+
+[node name="Food" type="Area2D" parent="." unique_id=1587624116]
