@@ -6,6 +6,8 @@
 
 [node name="Cell" type="RigidBody2D" unique_id=733137773]
 script = ExtResource("1_upbjj")
+speed = null
+time_to_replicate = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1990729696]
 shape = SubResource("CapsuleShape2D_6ngbm")
