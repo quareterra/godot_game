@@ -3,19 +3,31 @@ extends RigidBody2D
 @export var speed = 400.0
 @export var mama: Node2D = null
 @export var time_to_replicate = 2.0
+@export var time_to_die = 5.0
+@export var dist_to_mama_min = 50.0
+@export var dist_to_mama_max = 100.0
 
+var death_timer = 0.0
 var replication_timer = 0.0
 
 func _process(delta: float) -> void:
 	replication_timer += delta
+	death_timer += delta
 	
 	if replication_timer > time_to_replicate:
 		replicate()
 		replication_timer = 0.0
+		
+	if death_timer > time_to_die:
+		queue_free()
 
 func _physics_process(delta: float) -> void:
+	var dist = (mama.global_position - global_position).length()
 	var dir = (mama.global_position - global_position).normalized()
-	apply_central_force(dir * speed)
+	if (dist > dist_to_mama_max):
+		apply_central_force(dir * speed)
+	elif (dist < dist_to_mama_min):
+		apply_central_force(-dir * speed * (1 / dist) * dist_to_mama_min)
 
 func replicate() -> void:
 	var replicant = clone()
