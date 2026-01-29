@@ -15,4 +15,6 @@ linear_damp = 6.0
 angular_damp = 6.0
 speed = 400.0
 mama = NodePath("../cellMAMA")
+time_to_replicate = 2.0
 
+[node name="Food" type="Area2D" parent="." unique_id=1587624116]
