@@ -1,6 +1,6 @@
 extends Node2D
 var appear_timer = 0.0
-var time_to_appear = 2.0
+var time_to_appear = 0.2
 var food = load("res://scenes/food.tscn")
 
 func _process(delta: float) -> void:

@@ -16,5 +16,3 @@ gravity_scale = 0.0
 linear_damp = 6.0
 angular_damp = 6.0
 mama = NodePath("../cellMAMA")
-
-[node name="Food" type="Area2D" parent="." unique_id=1587624116]

@@ -5,6 +5,7 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6ngbm"]
 
 [node name="Cell" type="RigidBody2D" unique_id=733137773]
+collision_mask = 3
 script = ExtResource("1_upbjj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1990729696]
