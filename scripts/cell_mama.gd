@@ -1,5 +1,12 @@
 extends CharacterBody2D
 var speed = 10000
+var first_cell = load("res://scenes/cell.tscn")
+
+func _ready() -> void:
+	var cell = first_cell.instantiate()
+	cell.mama = self
+	cell.global_position = global_position
+	get_parent().call_deferred("add_child", cell)
 
 func _process(delta: float) -> void:
 	velocity = Vector2.ZERO
